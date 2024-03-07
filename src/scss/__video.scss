@@ -1,0 +1,20 @@
+@import "__variables.scss";
+@import "__mixin.scss";
+
+.video {
+  background-color: $color-light;
+  padding-bottom: 100px;
+
+  &__iframe {
+    border: 0;
+    height: 600px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .video__iframe {
+    width: calc(100vw - $gap-lg);
+    height: calc((100vw - $gap-lg) * (1080 / 1920));
+  }
+}

@@ -1,0 +1,20 @@
+$color-black: #000000;
+$color-primary: #34547a;
+$color-secondary: #727272;
+$color-gray-light: #eeeff1;
+$color-light: #f9f9f9;
+$color-white: #ffffff;
+
+$font-size: 16px;
+$font-family: "Roboto", sans-serif;
+$letter-spacing: 0.1em;
+
+$line-height-normal: 1.2;
+$line-height-lg: 1.64;
+
+$container-primary: 1110px;
+$container-sm: 540px;
+$gap: 20px;
+$gap-sm: calc($gap / 2);
+$gap-lg: calc($gap * 2);
+$container-secondary: calc(100% - $gap-lg)
