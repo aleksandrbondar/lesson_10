@@ -1,0 +1,5 @@
+@use "../../presets" as *;
+
+.process {
+  @include block (100px, 304px, 40px);
+}

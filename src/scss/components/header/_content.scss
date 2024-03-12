@@ -1,0 +1,43 @@
+@use "../../presets" as *;
+
+.content {
+  max-width: $container-sm;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 16px;
+  }
+
+  &__description {
+    color: $color-secondary;
+    margin-top: 10px;
+    margin-bottom: 58px;
+    line-height: $line-height-lg;
+  }
+
+  &__link {
+    color: $color-white;
+    background-color: $color-primary;
+    text-decoration: none;
+    letter-spacing: $letter-spacing;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    min-width: 225px;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &,
+  &__title,
+  &__link {
+    @media (max-width: $md) {
+      @include center;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@use "../../presets" as *;
+
+.navbar {
+  margin-bottom: 134px;
+
+  @media (max-width: $md) {
+    margin-bottom: 0;
+    min-height: 80px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    margin-left: -10px;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &__item {
+    @media (max-width: $md) {
+      border-bottom: 1px solid $color-primary;
+    }
+
+    &:first-child {
+      & .navbar__link {
+        @media (max-width: $md) {
+          width: calc(100% - 80px);
+          padding-left: 100px;
+        }
+
+        @media (max-width: $sm) {
+          width: 100%;
+          padding: 3vh;
+        }
+      }
+    }
+
+    &:last-child {
+      @media (max-width: $md) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-black;
+    padding: $gap-sm;
+    display: block;
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+    transition: scale 0.1s;
+
+    @media (max-width: $md) {
+      text-align: center;
+      padding: 3vh;
+    }
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: $color-primary;
+      scale: 1.1;
+
+      @media (max-width: $md) {
+        scale: 1;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__button {
+    right: 25px;
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @media (max-width: $md) {
+      display: block;
+    }
+
+    @media (max-width: $sm) {
+      position: static;
+      margin: 0 auto;
+    }
+
+    &.open span {
+      &:nth-child(1) {
+        top: 24px;
+        width: 0%;
+        left: 50%;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(4) {
+        top: 24px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+
+    &-item {
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 100%;
+      background: $color-primary;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 24px;
+      }
+
+      &:nth-child(4) {
+        top: 48px;
+      }
+    }
+  }
+}

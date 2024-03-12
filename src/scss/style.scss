@@ -1,10 +1,2 @@
-@import "__variables.scss";
-@import "__mixin.scss";
-@import "__main.scss";
-@import "__visually-hidden.scss";
-@import "__header.scss";
-@import "__about.scss";
-@import "__experience.scss";
-@import "__procces.scss";
-@import "__video.scss";
-@import "__footer.scss";
+@use "common";
+@use "components";

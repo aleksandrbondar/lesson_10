@@ -1,0 +1,23 @@
+@use "../../presets" as *;
+
+.experience {
+  color: $color-white;
+  background-color: $color-primary;
+  padding: 96.9px 0;
+
+  @media (max-width: $xl) {
+    padding: 50px 0;
+  }
+
+  &__container {
+    padding: 0 11px;
+    display: flex;
+    gap: 52px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: $xl) {
+      gap: 52px 20%;
+    }
+  }
+}

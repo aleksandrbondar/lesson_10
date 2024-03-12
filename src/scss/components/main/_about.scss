@@ -1,0 +1,5 @@
+@use "../../presets" as *;
+
+.about {
+  @include block(113px, 359px, 37px);
+}

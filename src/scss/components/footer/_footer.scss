@@ -1,5 +1,4 @@
-@import "__variables.scss";
-@import "__mixin.scss";
+@use "../../presets" as *;
 
 .footer {
   background-color: $color-primary;
@@ -15,13 +14,10 @@
   &__copyright {
     font-size: 13px;
   }
-}
 
-@media (max-width: 768px) {
-  .footer {
-
-    &__name,
-    &__copyright {
+  &__name,
+  &__copyright {
+    @media (max-width: $md) {
       @include center;
     }
   }
